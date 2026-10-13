@@ -1,616 +1,1254 @@
 <!doctype html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Bhukya Lachiram Nayak — APM Portfolio</title>
-<meta name="description" content="Computer Science graduate from IIT Tirupati building AI and technical products. Selected work in AI product management, growth, and 0-to-1 execution." />
+
+<title>Bhukya Lachiram Nayak — Product Portfolio</title>
+
+<meta name="description" content="Product Manager at Zexovo and IIT Tirupati CSE graduate building AI, SaaS, and fintech products through customer discovery, technical execution, and go-to-market." />
+
+
 
 <!-- Open Graph -->
-<meta property="og:title" content="Bhukya Lachiram Nayak — APM Portfolio" />
-<meta property="og:description" content="Selected work in AI product management, growth, and 0-to-1 execution." />
+
+<meta property="og:title" content="Bhukya Lachiram Nayak — Product Portfolio" />
+
+<meta property="og:description" content="Product management, AI, SaaS, growth, and 0-to-1 execution." />
+
 <meta property="og:type" content="website" />
 
+
+
 <!-- Fonts -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+
+
 <style>
+
   :root {
+
     --bg: #FAFAF7;
+
     --ink: #0F1114;
+
     --ink-soft: #2A2D33;
+
     --muted: #6B7079;
+
     --rule: #D6D2C7;
+
     --rule-soft: #E7E3D8;
+
     --accent: #1E3AC7;
+
     --highlight: #A66A2C;
+
     --paper: #F2EFE6;
 
+
+
     --serif: 'Instrument Serif', 'Georgia', serif;
+
     --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
+
+
     --max: 1120px;
+
   }
+
+
 
   * { box-sizing: border-box; }
+
   html { scroll-behavior: smooth; }
+
   body {
+
     margin: 0;
+
     background: var(--bg);
+
     color: var(--ink);
+
     font-family: var(--sans);
+
     font-size: 16px;
+
     line-height: 1.55;
+
     -webkit-font-smoothing: antialiased;
+
     text-rendering: optimizeLegibility;
+
   }
 
+
+
   a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color 0.15s ease; }
+
   a:hover { border-color: var(--ink); }
+
   a.plain { border: none; }
+
   a.plain:hover { border: none; }
+
+
 
   .wrap { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
 
+
+
   /* ─── NAV ─── */
+
   nav {
+
     position: sticky; top: 0; z-index: 20;
+
     background: rgba(250, 250, 247, 0.92);
+
     backdrop-filter: saturate(140%) blur(8px);
+
     border-bottom: 1px solid var(--rule-soft);
+
   }
+
   .nav-inner {
+
     display: flex; justify-content: space-between; align-items: center;
+
     padding: 16px 32px; max-width: var(--max); margin: 0 auto;
+
   }
+
   .nav-name {
+
     font-family: var(--serif); font-size: 20px; letter-spacing: 0.2px;
+
   }
+
   .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
+
   .nav-links a { color: var(--muted); border: none; }
+
   .nav-links a:hover { color: var(--ink); }
+
   .nav-cta { color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
 
+
+
   @media (max-width: 720px) {
+
     .nav-links { gap: 18px; font-size: 13px; }
+
     .nav-name { font-size: 18px; }
+
   }
+
+
 
   /* ─── HERO ─── */
+
   .hero { padding: 96px 0 112px; }
+
   .hero-grid {
+
     display: grid;
+
     grid-template-columns: 1.4fr 1fr;
+
     gap: 80px;
+
     align-items: end;
+
   }
+
   .hero h1 {
+
     font-family: var(--serif);
+
     font-weight: 400;
+
     font-size: clamp(48px, 7vw, 92px);
+
     line-height: 1.02;
+
     margin: 0 0 24px;
+
     letter-spacing: -0.5px;
+
   }
+
   .hero .lede {
+
     font-family: var(--serif);
+
     font-style: italic;
+
     font-size: clamp(22px, 2.6vw, 30px);
+
     line-height: 1.35;
+
     color: var(--ink-soft);
+
     max-width: 30ch;
+
     margin: 0 0 40px;
+
   }
+
   .hero-meta {
+
     display: flex; flex-wrap: wrap; gap: 8px 24px;
+
     font-size: 14px; color: var(--muted); margin-bottom: 36px;
+
   }
+
   .hero-cta { display: flex; gap: 24px; align-items: center; }
+
   .btn {
+
     display: inline-flex; align-items: center; gap: 8px;
+
     padding: 12px 22px;
+
     background: var(--ink); color: var(--bg);
+
     border: none; border-radius: 2px;
+
     font-size: 15px; font-weight: 500;
+
     transition: background 0.15s ease;
+
   }
+
   .btn:hover { background: var(--accent); }
+
   .btn.ghost { background: transparent; color: var(--ink); padding: 12px 0; }
+
   .btn.ghost:hover { background: transparent; color: var(--accent); }
 
+
+
   .hero-anchor {
+
     border-left: 1px solid var(--rule);
+
     padding-left: 40px;
-  }
-  .anchor-label {
-    font-size: 13px; color: var(--muted); margin-bottom: 12px;
-  }
-  .anchor-number {
-    font-family: var(--serif);
-    font-size: clamp(64px, 8vw, 96px);
-    line-height: 1;
-    color: var(--highlight);
-    margin-bottom: 8px;
-    letter-spacing: -1px;
-  }
-  .anchor-caption {
-    font-family: var(--serif); font-style: italic;
-    font-size: 18px; color: var(--ink-soft); line-height: 1.4;
-    max-width: 22ch;
+
   }
 
-  @media (max-width: 900px) {
-    .hero { padding: 64px 0 80px; }
-    .hero-grid { grid-template-columns: 1fr; gap: 56px; }
-    .hero-anchor { border-left: none; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 32px; }
+  .anchor-label {
+
+    font-size: 13px; color: var(--muted); margin-bottom: 12px;
+
   }
+
+  .anchor-number {
+
+    font-family: var(--serif);
+
+    font-size: clamp(64px, 8vw, 96px);
+
+    line-height: 1;
+
+    color: var(--highlight);
+
+    margin-bottom: 8px;
+
+    letter-spacing: -1px;
+
+  }
+
+  .anchor-caption {
+
+    font-family: var(--serif); font-style: italic;
+
+    font-size: 18px; color: var(--ink-soft); line-height: 1.4;
+
+    max-width: 22ch;
+
+  }
+
+
+
+  @media (max-width: 900px) {
+
+    .hero { padding: 64px 0 80px; }
+
+    .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+
+    .hero-anchor { border-left: none; border-top: 1px solid var(--rule); padding-left: 0; padding-top: 32px; }
+
+  }
+
+
 
   /* ─── SECTION HEADER ─── */
+
   .section { padding: 72px 0; border-top: 1px solid var(--rule); }
+
   .section-eyebrow {
+
     font-family: var(--serif); font-style: italic;
+
     color: var(--muted); font-size: 20px;
+
     margin-bottom: 4px;
+
   }
+
   .section-title {
+
     font-family: var(--serif);
+
     font-weight: 400;
+
     font-size: clamp(36px, 4.5vw, 56px);
+
     line-height: 1.05;
+
     margin: 0 0 56px;
+
     letter-spacing: -0.3px;
+
   }
+
+
 
   /* ─── WORK / CASE STUDIES ─── */
+
   .case {
+
     display: grid;
+
     grid-template-columns: 220px 1fr;
+
     gap: 64px;
+
     padding: 56px 0;
+
     border-top: 1px solid var(--rule-soft);
+
   }
+
   .case:first-of-type { border-top: none; padding-top: 8px; }
 
+
+
   .case-meta {
+
     font-size: 13px; color: var(--muted); line-height: 1.7;
+
   }
+
   .case-meta .meta-label {
+
     display: block; font-family: var(--serif); font-style: italic;
+
     color: var(--ink-soft); font-size: 15px; margin-bottom: 2px;
+
   }
+
   .case-meta .meta-group { margin-bottom: 20px; }
+
   .case-meta a { color: var(--accent); border-bottom-color: var(--accent); font-size: 14px; }
 
+
+
   .case-body h3 {
+
     font-family: var(--serif);
+
     font-weight: 400;
+
     font-size: clamp(28px, 3.5vw, 40px);
+
     line-height: 1.1;
+
     margin: 0 0 20px;
+
     letter-spacing: -0.3px;
+
   }
+
   .case-body .problem {
+
     font-family: var(--serif); font-style: italic;
+
     font-size: 20px; line-height: 1.5; color: var(--ink-soft);
+
     margin: 0 0 28px; max-width: 62ch;
+
   }
+
   .case-body p { max-width: 62ch; margin: 0 0 16px; }
+
   .case-body h4 {
+
     font-family: var(--sans); font-weight: 500;
+
     font-size: 13px; color: var(--muted);
+
     margin: 28px 0 10px; letter-spacing: 0.3px;
+
   }
+
   .case-outcome {
+
     background: var(--paper);
+
     padding: 20px 24px;
+
     margin-top: 28px;
+
     border-left: 2px solid var(--highlight);
+
     max-width: 62ch;
+
     font-size: 15px;
+
   }
+
   .case-outcome strong { font-weight: 600; }
 
+
+
   @media (max-width: 900px) {
+
     .case { grid-template-columns: 1fr; gap: 24px; padding: 40px 0; }
+
     .case-meta { display: flex; flex-wrap: wrap; gap: 12px 32px; }
+
     .case-meta .meta-group { margin-bottom: 0; }
+
   }
+
+
 
   /* ─── EXPERIENCE TIMELINE ─── */
+
   .exp-row {
+
     display: grid;
+
     grid-template-columns: 220px 1fr;
+
     gap: 64px;
+
     padding: 28px 0;
+
     border-top: 1px solid var(--rule-soft);
+
   }
+
   .exp-row:first-of-type { border-top: none; }
+
   .exp-when {
+
     font-size: 14px; color: var(--muted);
+
   }
+
   .exp-role {
+
     font-family: var(--serif); font-size: 24px; line-height: 1.2; margin: 0 0 4px;
+
   }
+
   .exp-org {
+
     font-size: 14px; color: var(--muted); margin-bottom: 12px;
+
   }
+
   .exp-body { font-size: 15px; max-width: 62ch; color: var(--ink-soft); }
 
+
+
   @media (max-width: 900px) {
+
     .exp-row { grid-template-columns: 1fr; gap: 8px; }
+
   }
+
+
 
   /* ─── ABOUT + SKILLS ─── */
+
   .about-grid {
+
     display: grid;
+
     grid-template-columns: 0.85fr 1.15fr;
+
     gap: 72px;
+
     align-items: start;
+
   }
+
   .portrait-frame {
+
     display: block;
+
     width: 100%;
+
+  }
+
+  .portrait-monogram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    border: 1px solid var(--rule);
+    background: linear-gradient(145deg, #f2efe6 0%, #e8e2d5 100%);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: clamp(64px, 10vw, 120px);
+    letter-spacing: -4px;
   }
   .portrait-frame img {
+
     display: block;
+
     width: 100%;
+
     height: auto;
+
     border: 1px solid var(--rule);
+
   }
+
   .portrait-caption {
+
     font-family: var(--serif); font-style: italic;
+
     font-size: 15px; color: var(--muted);
+
     margin-top: 14px; line-height: 1.5;
+
     max-width: 34ch;
+
   }
+
   .about-body { font-size: 17px; line-height: 1.65; max-width: 58ch; }
+
   .about-body p { margin: 0 0 18px; }
 
+
+
   .skills-block {
+
     margin-top: 72px;
+
     padding-top: 48px;
+
     border-top: 1px solid var(--rule-soft);
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 48px;
+
   }
+
   .skill-group { }
+
   .skill-label {
+
     font-family: var(--serif); font-style: italic;
+
     font-size: 18px; color: var(--ink-soft);
+
     margin-bottom: 10px;
+
   }
+
   .skill-list { font-size: 14px; color: var(--muted); line-height: 1.75; }
 
+
+
   @media (max-width: 900px) {
+
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
+
     .portrait-frame { max-width: 320px; }
+
     .skills-block { grid-template-columns: 1fr; gap: 28px; margin-top: 48px; padding-top: 36px; }
+
   }
+
+
 
   /* ─── CONTACT ─── */
+
   .contact-title {
+
     font-family: var(--serif);
+
     font-size: clamp(48px, 7vw, 88px);
+
     line-height: 1.02;
+
     letter-spacing: -0.5px;
+
     margin: 0 0 32px;
+
     max-width: 18ch;
+
   }
+
   .contact-title em { font-style: italic; }
+
   .contact-lines {
+
     display: flex; flex-direction: column; gap: 16px;
+
     font-size: 18px;
+
   }
+
   .contact-lines .k { color: var(--muted); font-size: 14px; display: inline-block; width: 100px; }
 
+
+
   /* ─── FOOTER ─── */
+
   footer {
+
     padding: 40px 0 56px;
+
     border-top: 1px solid var(--rule);
+
     font-size: 13px; color: var(--muted);
+
     display: flex; justify-content: space-between; align-items: center;
+
     flex-wrap: wrap; gap: 12px;
+
   }
+
+
 
   /* subtle entry animation — hero only, one moment */
+
   @media (prefers-reduced-motion: no-preference) {
+
     .hero h1, .hero .lede, .hero-meta, .hero-cta, .hero-anchor {
+
       opacity: 0; transform: translateY(8px);
+
       animation: rise 0.7s ease forwards;
+
     }
+
     .hero .lede { animation-delay: 0.1s; }
+
     .hero-meta { animation-delay: 0.2s; }
+
     .hero-cta { animation-delay: 0.3s; }
+
     .hero-anchor { animation-delay: 0.15s; }
+
   }
+
   @keyframes rise {
+
     to { opacity: 1; transform: translateY(0); }
+
   }
+
+
 
   :focus-visible {
+
     outline: 2px solid var(--accent);
+
     outline-offset: 3px;
+
     border-radius: 2px;
+
   }
+
 </style>
+
 </head>
+
 <body>
 
+
+
 <!-- ═══════════════════ NAV ═══════════════════ -->
+
 <nav>
+
   <div class="nav-inner">
+
     <a href="#top" class="nav-name plain">Lachiram Nayak</a>
+
     <div class="nav-links">
+
       <a href="#work">Work</a>
+
       <a href="#experience">Experience</a>
+
       <a href="#about">About</a>
+
       <a href="#contact" class="nav-cta">Contact</a>
+
     </div>
+
   </div>
+
 </nav>
 
+
+
 <!-- ═══════════════════ HERO ═══════════════════ -->
+
 <header id="top" class="hero">
+
   <div class="wrap hero-grid">
+
     <div>
+
       <h1>Bhukya<br/>Lachiram Nayak.</h1>
-      <p class="lede">I build AI and technical products — from user interviews to the PRD to the shipped MVP.</p>
+
+      <p class="lede">I turn customer problems into shipped products — from discovery and strategy to technical execution and launch.</p>
+
       <div class="hero-meta">
-        <span>Bengaluru, India</span>
+
+        <span>Hyderabad, India</span>
+
         <span>CS graduate, IIT Tirupati &rsquo;26</span>
-        <span>Open to Associate PM roles</span>
+
+        <span>Product Management · AI · Fintech</span>
+
       </div>
+
       <div class="hero-cta">
-        <a class="btn" href="Lachiram_Nayak_APM_Resume.pdf" download>Download résumé</a>
+
+        <a class="btn" href="Bhukya_Lachiram_Nayak_pm.pdf" download>Download résumé</a>
+
         <a class="btn ghost" href="#contact">Get in touch →</a>
+
       </div>
+
     </div>
+
     <aside class="hero-anchor">
-      <div class="anchor-label">Signature moment</div>
+
+      <div class="anchor-label">Business impact</div>
+
       <div class="anchor-number">₹1.30 Cr</div>
+
       <div class="anchor-caption">Revenue driven in eight weeks at Unacademy, leading a team of ten.</div>
+
     </aside>
+
   </div>
+
 </header>
 
+
+
 <!-- ═══════════════════ WORK ═══════════════════ -->
+
 <section id="work" class="section">
+
   <div class="wrap">
+
     <div class="section-eyebrow">Selected work</div>
+
     <h2 class="section-title">Four things I&rsquo;ve shipped or specified.</h2>
 
+
+
     <!-- Case 1 -->
+
     <article class="case">
+
       <div class="case-meta">
+
         <div class="meta-group">
+
           <span class="meta-label">Year</span>
+
           May – Jul 2024
+
         </div>
+
         <div class="meta-group">
+
           <span class="meta-label">Role</span>
+
           Sales &amp; Product Funnel Intern<br/>Unacademy, Tirupati
+
         </div>
+
         <div class="meta-group">
+
           <span class="meta-label">Domain</span>
+
           EdTech · Growth · Funnel
+
         </div>
+
       </div>
+
       <div class="case-body">
+
         <h3>₹1.30 Cr in eight weeks.</h3>
+
         <p class="problem">Unacademy&rsquo;s high-ticket JEE courses had a top-of-funnel conversion problem in Tier 2/3 markets. A 10-person outbound team was working hard without a shared playbook — every rep was rediscovering what worked.</p>
 
+
+
         <h4>What I did</h4>
+
         <p>I ran structured tests on pitch scripts, segmenting by objection type — price, doubt in outcomes, offline-coaching loyalty. Instrumented the daily CRM funnel to see where each cohort dropped off. Iterated the pitch weekly based on what the top three reps were doing that the others weren&rsquo;t.</p>
 
+
+
         <h4>What I learned</h4>
+
         <p>The pitches that converted didn&rsquo;t sound polished. They named the parent&rsquo;s actual fear — usually &ldquo;am I wasting money that could go toward my other kid&rsquo;s education&rdquo; — in the first thirty seconds. Everything after that was easier.</p>
 
+
+
         <div class="case-outcome">
+
           <strong>Outcome:</strong> ₹1.30 Cr in revenue across 87 high-ticket conversions in 8 weeks, from a team of 10.
+
         </div>
+
       </div>
+
     </article>
+
+
 
     <!-- Case 2 -->
+
     <article class="case">
+
       <div class="case-meta">
+
         <div class="meta-group">
+
           <span class="meta-label">Year</span>
+
           2025
+
         </div>
+
         <div class="meta-group">
+
           <span class="meta-label">Role</span>
+
           PRD author &amp; system architect
+
         </div>
+
         <div class="meta-group">
+
           <span class="meta-label">Domain</span>
+
           Fintech · AI · Fraud
+
         </div>
+
         <div class="meta-group">
+
           <a href="https://github.com/bhukyalachiramnayak/ICICI-projects" target="_blank" rel="noopener">Read the PRD →</a>
+
         </div>
+
       </div>
+
       <div class="case-body">
+
         <h3>RiskGuard — fraud scoring at forty milliseconds.</h3>
+
         <p class="problem">Banks need to catch fraud in real time without blocking legitimate customers. Manual review is too slow. Pure-ML systems are hard to explain to compliance — and to a customer whose transaction just got declined at a checkout.</p>
 
+
+
         <h4>What I did</h4>
+
         <p>Wrote an end-to-end PRD for a rules-plus-scoring engine with a hard latency budget of &lt;40ms P99. Specified the API contract, weighted-signal logic, decision thresholds (approve / review / decline), and the rules-trace payload analysts see when they review a flagged transaction.</p>
 
+
+
         <h4>Product decisions worth calling out</h4>
+
         <p>The middle <em>review</em> band matters more than most designs treat it — that&rsquo;s where you protect against false positives that erode customer trust. And explainability isn&rsquo;t a nice-to-have in fraud: the rules trace is a first-class product feature, not a debug log.</p>
 
+
+
         <div class="case-outcome">
+
           <strong>Deliverable:</strong> Complete PRD covering scoring logic, API contract, analyst dashboard, alerts flow, MVP scope, and release criteria — modeled against a target 42% reduction in fraud losses versus a rules-only baseline.
+
         </div>
+
       </div>
+
     </article>
+
+
 
     <!-- Case 3 -->
+
     <article class="case">
+
       <div class="case-meta">
+
         <div class="meta-group">
+
           <span class="meta-label">Year</span>
+
           2025
+
         </div>
+
         <div class="meta-group">
+
           <span class="meta-label">Role</span>
+
           End-to-end: PRD to shipped MVP
+
         </div>
+
         <div class="meta-group">
+
           <span class="meta-label">Domain</span>
+
           AI · Enterprise · RAG
+
         </div>
+
         <div class="meta-group">
+
           <a href="https://github.com/bhukyalachiramnayak/chat-bot-Q-A.git" target="_blank" rel="noopener">View the project →</a>
+
         </div>
+
       </div>
+
       <div class="case-body">
+
         <h3>An AI assistant that will say &ldquo;I don&rsquo;t know.&rdquo;</h3>
+
         <p class="problem">Construction site teams spend hours searching PDFs — contracts, safety manuals, method statements — for answers they need in minutes. On a construction site, a wrong answer is worse than no answer.</p>
 
+
+
         <h4>What I did</h4>
+
         <p>Scoped a retrieval-augmented generation (RAG) system with a hard product constraint: never answer without a source, and explicitly say &ldquo;not found&rdquo; when the retrieved context can&rsquo;t support a confident answer. Defined ingestion, chunking, retrieval, and generation as four separate quality gates with their own evaluation criteria. Shipped the MVP end-to-end with FastAPI, LangChain, ChromaDB, and Docker.</p>
 
+
+
         <h4>Product decision worth calling out</h4>
+
         <p>Trust beats coverage. It&rsquo;s better for the assistant to refuse 20% of questions than to hallucinate a safety clause and get someone hurt. That single principle shaped every downstream decision — chunk size, retrieval top-k, the prompt, the &ldquo;not found&rdquo; UX.</p>
 
+
+
         <div class="case-outcome">
+
           <strong>Outcome:</strong> Working MVP that answers questions with document + page references, refuses when unsure, and runs locally or in Docker with no manual infrastructure setup.
+
         </div>
+
       </div>
+
     </article>
+
+
 
     <!-- Case 4 -->
+
     <article class="case">
+
       <div class="case-meta">
+
         <div class="meta-group">
+
           <span class="meta-label">Year</span>
+
           2024
+
         </div>
+
         <div class="meta-group">
+
           <span class="meta-label">Role</span>
+
           Founder &amp; Product Lead
+
         </div>
+
         <div class="meta-group">
+
           <span class="meta-label">Domain</span>
+
           EdTech · 0-to-1 · Tier 2/3
+
         </div>
+
       </div>
+
       <div class="case-body">
+
         <h3>Aspire — what Tier 2/3 JEE aspirants actually want.</h3>
+
         <p class="problem">Kids in Tier 2/3 cities preparing for JEE are stuck between offline coaching that costs a lakh they don&rsquo;t have and online platforms built for kids who already know what they&rsquo;re doing.</p>
 
+
+
         <h4>What I did</h4>
+
         <p>Talked to twenty-plus students and parents. Modeled unit economics against realistic willingness-to-pay in Tier 2/3 markets. Designed the onboarding funnel for students who might be the first in their family to attempt JEE. Ran a localized GTM pilot to test whether paid social or word-of-mouth referral converted better in a specific district.</p>
 
+
+
         <h4>What I learned</h4>
+
         <p>Willingness-to-pay wasn&rsquo;t the blocker. The trust gap was. Parents weren&rsquo;t skeptical of the price — they were skeptical of anything online after a decade of bad experiences with sketchy edtech. That reframed the whole product: the wedge had to be trust, not features or price.</p>
 
+
+
         <div class="case-outcome">
+
           <strong>Outcome:</strong> Validated the core wedge, killed the general-purpose version, and set the foundation for a trust-first onboarding experience.
+
         </div>
+
       </div>
+
     </article>
 
+
+
   </div>
+
 </section>
+
+
 
 <!-- ═══════════════════ EXPERIENCE ═══════════════════ -->
+
 <section id="experience" class="section">
+
   <div class="wrap">
+
     <div class="section-eyebrow">Experience</div>
+
     <h2 class="section-title">Where I&rsquo;ve worked so far.</h2>
 
+
+
     <div class="exp-row">
-      <div class="exp-when">Jan 2026 — Present<br/>Bengaluru</div>
+
+      <div class="exp-when">Sep 2026 — Present<br/>Hyderabad, India</div>
       <div>
+        <div class="exp-role">Product Manager</div>
+        <div class="exp-org">Zexovo Private Limited · Edunage School ERP</div>
+        <div class="exp-body">Own product discovery and execution for Edunage, a school ERP spanning administrator, staff, and student workflows. Conducted 100+ customer discovery conversations across school segments to understand adoption barriers and operational pain points. Translate findings into product requirements, UX improvements, QA priorities, and roadmap decisions across academics, attendance, examinations, fees, and leave management. Drive competitor research, school segmentation, pricing exploration, and pilot-led go-to-market planning.</div>
+      </div>
+    </div>
+
+    <div class="exp-row">
+
+      <div class="exp-when">Jan 2026 — Aug 2026<br/>Bengaluru</div>
+
+      <div>
+
         <div class="exp-role">Software Engineer Intern</div>
+
         <div class="exp-org">Atoll Solutions</div>
+
         <div class="exp-body">Reliability improvements across logging, load balancing, and DB recovery contributing to 99% uptime. Documented redundancy-vs-cost tradeoffs to support engineering prioritization on production feature scoping.</div>
+
       </div>
+
     </div>
 
+
+
     <div class="exp-row">
+
       <div class="exp-when">May – Jul 2025<br/>Bengaluru</div>
+
       <div>
+
         <div class="exp-role">Machine Learning Intern</div>
+
         <div class="exp-org">Easily Done</div>
+
         <div class="exp-body">Shipped credit-risk scoring for an underbanked lending product. Defined risk segments, success metrics, and eligibility rules integrated into the underwriting flow. Cut prediction error by 28% (MAPE) via domain-informed feature engineering with XGBoost, Random Forest, and Optuna.</div>
+
       </div>
+
     </div>
 
+
+
     <div class="exp-row">
+
       <div class="exp-when">May – Jul 2024<br/>Tirupati</div>
+
       <div>
+
         <div class="exp-role">Sales &amp; Product Funnel Intern</div>
+
         <div class="exp-org">Unacademy</div>
+
         <div class="exp-body">Generated ₹1.30 Cr in 8 weeks across 87 high-ticket funnel touchpoints. Led a 10-member outbound team; ran experiments on pitch scripts and objection handling, and iterated acquisition strategies based on drop-off analysis.</div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- ═══════════════════ ABOUT ═══════════════════ -->
+
 <section id="about" class="section">
+
   <div class="wrap">
+
     <div class="section-eyebrow">About</div>
+
     <h2 class="section-title">A little more context.</h2>
 
+
+
     <div class="about-grid">
+
       <div>
+
         <figure class="portrait-frame">
+
           <img src="profile.jpg" alt="Portrait of Bhukya Lachiram Nayak" />
-          <figcaption class="portrait-caption">Bengaluru, 2026. Fresh out of IIT Tirupati, building AI products.</figcaption>
+
+          <figcaption class="portrait-caption">Bengaluru, 2026. Product Manager at Zexovo, building software products.</figcaption>
+
         </figure>
+
       </div>
+
+
 
       <div class="about-body">
-        <p>I&rsquo;m a Computer Science graduate from IIT Tirupati, class of 2026. My path into product has been a little sideways — I started by writing code, moved into ML work, and then found I liked the shape of the problem itself more than any one part of solving it.</p>
+
+        <p>I&rsquo;m a Computer Science graduate from IIT Tirupati, class of 2026. I currently work as a Product Manager at Zexovo, owning Edunage School ERP across discovery, customer research, product requirements, UX, QA, and go-to-market. My path into product started with software engineering and ML, which helps me connect user needs with technical trade-offs.</p>
+
         <p>What I keep coming back to is the specific texture of AI products right now: you can&rsquo;t reason about them the way you&rsquo;d reason about a CRUD app, and the interesting questions are almost always about trust, evaluation, and where the human belongs in the loop.</p>
+
         <p>Outside of that — I grew up in a small town in Telangana, was the first in my family to make it to an IIT, and won gold at the Intra-IIT cricket championship in 2024. I like problems where the answer is boring but the getting-there isn&rsquo;t.</p>
+
       </div>
+
     </div>
+
+
 
     <div class="skills-block">
+
       <div class="skill-group">
+
         <div class="skill-label">Product</div>
+
         <div class="skill-list">PRD authoring · User research · Wireframing (Figma) · RICE prioritization · A/B testing · Funnel analytics · Jira</div>
+
       </div>
+
       <div class="skill-group">
+
         <div class="skill-label">AI product</div>
+
         <div class="skill-list">LLM application design · RAG systems · Prompt engineering · Evaluation &amp; guardrails · Agent workflows · Claude · OpenAI APIs · LangChain</div>
+
       </div>
+
       <div class="skill-group">
+
         <div class="skill-label">Technical</div>
+
         <div class="skill-list">Python · SQL · Java · System design · REST APIs · Microservices · Docker · Git · React · ML (XGBoost, Random Forest)</div>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
 
 <!-- ═══════════════════ CONTACT ═══════════════════ -->
+
 <section id="contact" class="section">
+
   <div class="wrap">
+
     <h2 class="contact-title">Say <em>hello</em>, or send me a role you&rsquo;re hiring for.</h2>
+
     <div class="contact-lines">
+
       <div><span class="k">Email</span><a href="mailto:bhukyalachiramnayak9@gmail.com">bhukyalachiramnayak9@gmail.com</a></div>
+
       <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/lachiram-nayak-bhukya-864b37410/" target="_blank" rel="noopener">linkedin.com/in/lachiram</a></div>
+
       <div><span class="k">GitHub</span><a href="https://github.com/lachiram" target="_blank" rel="noopener">github.com/lachiram</a></div>
+
       <div><span class="k">Phone</span><a href="tel:+919618105512">+91 96181 05512</a></div>
+
     </div>
+
   </div>
+
 </section>
 
+
+
 <footer>
+
   <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+
     <span>© 2026 Bhukya Lachiram Nayak.</span>
-    <span>Bengaluru · Open to APM roles worldwide.</span>
+
+    <span>Hyderabad · Product Management, AI, SaaS & fintech.</span>
+
   </div>
+
 </footer>
 
+
+
 </body>
+
 </html>
